@@ -1,18 +1,9 @@
 import {useState, FC} from "react";
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconName } from "@fortawesome/free-brands-svg-icons";
+import { projectData } from '../page/Home';
 
-interface ProjectProps {
-    title: string;
-    description: string[];
-    websiteURL: string;
-    languages: IconName[];
-    classes: string;
-    open: boolean;
-}
-
-const Project: FC<ProjectProps> = ({ title, description, websiteURL, languages, classes, open }) => {
+const Project: FC<projectData> = ({ title, description, url, github, logos, classes, open }) => {
     const [isOpen, setIsOpen] = useState(open);
 
     const toggleDetails = () => {
@@ -27,8 +18,13 @@ const Project: FC<ProjectProps> = ({ title, description, websiteURL, languages, 
                 <h2 className={'text-2xl font-medium h-full' + (isOpen ? ' text-green-500' : '')}>{title}</h2>
             </div>
             <div className={"w-min flex gap-5 items-center"}>
-                <Link to={websiteURL} title={title} target="_blank"
-                   className={"bg-[#999] bg-opacity-20 rounded-full py-2 px-1.5 transition hover:bg-opacity-50 flex items-center justify-center"}>
+                {github.length > 0 ?
+                    <Link to={github} title={github} target="_blank"
+                          className={"bg-[#999] bg-opacity-20 rounded-full py-2 px-1.5 transition flex items-center justify-center"}>
+                        <FontAwesomeIcon icon={['fab', 'github']}/>
+                    </Link> : ''}
+                <Link to={url} title={title} target="_blank"
+                   className={"bg-[#999] bg-opacity-20 rounded-full py-2 px-1.5 transition flex items-center justify-center"}>
                     <FontAwesomeIcon icon={['fas', 'link']}/>
                 </Link>
             </div>
@@ -39,7 +35,7 @@ const Project: FC<ProjectProps> = ({ title, description, websiteURL, languages, 
                 </div>
             ))}
             <div className={"flex gap-8 text-4xl text-[#999] text-opacity-50 pt-1 justify-center"}>
-                {languages.map((item, index) => (<div key={index}>
+                {logos.map((item, index) => (<div key={index}>
                         <FontAwesomeIcon icon={['fab', item]}/>
                     </div>
                 ))}

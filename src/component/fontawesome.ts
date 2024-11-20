@@ -13,12 +13,14 @@ import {
 import {
     faReact,
     faHtml5,
-    faCss3,
+    faCss,
     faJsSquare,
     faPhp,
     faWordpress,
     faGithubSquare,
+    faGithub,
     faLinkedin,
+    faNode,
     faSquareFontAwesomeStroke
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -32,11 +34,13 @@ library.add(
     faCircleCheck,
     faReact,
     faHtml5,
-    faCss3,
+    faCss,
     faJsSquare,
     faPhp,
+    faGithub,
     faWordpress,
     faGithubSquare,
     faLinkedin,
+    faNode,
     faSquareFontAwesomeStroke
 );

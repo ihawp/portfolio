@@ -11,7 +11,7 @@ const ScrollToTop = () => {
         window.scrollTo(0, 0);
     }, [pathname]);
 
-    return null; // This component does not render anything
+    return null;
 };
 
 export default function App() {
@@ -26,14 +26,14 @@ export default function App() {
                         </div>
                         <nav
                             className={"flex sm:gap-5 h-[40px] w-full justify-end items-center gap-3 sm:gap-0 text-center"}>
-                            <Link to={"https://www.linkedin.com/in/warren-chemerika-628b15275"} title="LinkedIn"
+                            <Link to={"https://www.linkedin.com/in/warren-chemerika-628b15275"} title="LinkedIn: Warren Chemerika"
                                   target={"_blank"}
-                                  className={"sm:flex-grow-0 flex-grow hover:opacity-80 transition"}>LinkedIn</Link>
-                            <Link to={"/Front-EndWebDevCertificateWarrenChemerika.pdf"} target={"_blank"}
-                                  title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}
-                                  className={"sm:flex-grow-0 flex-grow hover:opacity-80 transition"}>Certificate</Link>
+                                  className={"sm:flex-grow-0 flex-grow transition"}>LinkedIn</Link>
+                            <Link to={"https://github.com/ihawp"} target={"_blank"}
+                                  title={"GitHub: ihawp"}
+                                  className={"sm:flex-grow-0 flex-grow transition"}>GitHub</Link>
                             <Link to={"mailto:ihawp@ihawp.com"} title="Email: ihawp@ihawp.com"
-                                  className={"sm:flex-grow-0 flex-grow bg-green-600 py-1 px-3 rounded hover:bg-opacity-80 transition"}>Contact</Link>
+                                  className={"sm:flex-grow-0 flex-grow bg-green-600 py-1 px-3 rounded transition"}>Contact</Link>
                         </nav>
                     </header>
                     <ScrollToTop />
