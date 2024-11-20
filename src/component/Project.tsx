@@ -17,14 +17,14 @@ const Project: FC<projectData> = ({ title, description, url, github, logos, clas
                 <FontAwesomeIcon icon={['fas', isOpen ? 'minus' : 'plus']} className={"mr-3 opacity-40 text-[#999] hidden sm:inline"}/>
                 <h2 className={'text-2xl font-medium h-full' + (isOpen ? ' text-green-500' : '')}>{title}</h2>
             </div>
-            <div className={"w-min flex gap-5 items-center"}>
+            <div className={"w-min flex gap-3 items-center ml-2"}>
                 {github.length > 0 ?
                     <Link to={github} title={github} target="_blank"
-                          className={"bg-[#999] bg-opacity-20 rounded-full py-2 px-1.5 transition flex items-center justify-center"}>
-                        <FontAwesomeIcon icon={['fab', 'github']}/>
+                          className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
+                        <FontAwesomeIcon icon={['fab', 'github']} className={"text-xl"}/>
                     </Link> : ''}
                 <Link to={url} title={title} target="_blank"
-                   className={"bg-[#999] bg-opacity-20 rounded-full py-2 px-1.5 transition flex items-center justify-center"}>
+                   className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
                     <FontAwesomeIcon icon={['fas', 'link']}/>
                 </Link>
             </div>

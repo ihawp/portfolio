@@ -21,19 +21,19 @@ export default function App() {
                 <div className={"text-white text-lg w-full p-4 max-w-3xl flex flex-col"}>
                     <header className={"font-bold flex bg-[#999] bg-opacity-10 rounded py-1 px-1.5 sm:pr-2 sm:pl-4"}>
                         <div className={"items-center sm:flex hidden"}>
-                            <h2 className={"text-xl spongeboymebob mt-1 text-green-500"}><Link to={"/"}>ihawp.com</Link>
+                            <h2 className={"text-xl spongeboymebob mt-1 text-green-600"}><Link to={"/"}>ihawp.com</Link>
                             </h2>
                         </div>
                         <nav
                             className={"flex sm:gap-5 h-[40px] w-full justify-end items-center gap-3 sm:gap-0 text-center"}>
                             <Link to={"https://www.linkedin.com/in/warren-chemerika-628b15275"} title="LinkedIn: Warren Chemerika"
                                   target={"_blank"}
-                                  className={"sm:flex-grow-0 flex-grow transition"}>LinkedIn</Link>
+                                  className={"sm:flex-grow-0 flex-grow"}>LinkedIn</Link>
                             <Link to={"https://github.com/ihawp"} target={"_blank"}
                                   title={"GitHub: ihawp"}
-                                  className={"sm:flex-grow-0 flex-grow transition"}>GitHub</Link>
+                                  className={"sm:flex-grow-0 flex-grow"}>GitHub</Link>
                             <Link to={"mailto:ihawp@ihawp.com"} title="Email: ihawp@ihawp.com"
-                                  className={"sm:flex-grow-0 flex-grow bg-green-600 py-1 px-3 rounded transition"}>Contact</Link>
+                                  className={"sm:flex-grow-0 flex-grow bg-green-600 py-1 px-3 rounded"}>Contact</Link>
                         </nav>
                     </header>
                     <ScrollToTop />
@@ -44,29 +44,29 @@ export default function App() {
                     <footer className={"flex text-lg pt-16 pb-32 sm:py-10 flex-col-reverse sm:flex-row sm:justify-start text-[#999] text-opacity-40"}>
                         <div
                             className={"sm:w-[300px] w-full sm:text-xl text-lg flex justify-center mt-7 sm:mt-0 sm:justify-start"}>
-                            <p className={"spongeboymebob hover:opacity-80"}><Link
+                            <p className={"spongeboymebob"}><Link
                                 to={"/"}>&copy; ihawp.com {new Date().getFullYear()}</Link></p>
                         </div>
                         <div
                             className={"flex flex-auto flex-wrap sm:justify-end w-full sm:gap-3 gap-4 sm:text-3xl text-5xl justify-center"}>
                             <a href={"https://www.github.com/ihawp"} title={"Github"} target={"_blank"}><FontAwesomeIcon
                                 icon={['fab', 'github-square']}
-                                className={"hover:opacity-80"}/></a>
+                                /></a>
                             <a href={"mailto:ihawp@ihawp.com"} title={"Email: ihawp@ihawp.com"}><FontAwesomeIcon
                                 icon={['fas', 'envelope-square']}
-                                className={"hover:opacity-80"}/></a>
+                                /></a>
                             <a href={"https://www.linkedin.com/in/warren-chemerika-628b15275"} title={"LinkedIn"}
                                target={"_blank"}>
-                                <FontAwesomeIcon icon={['fab', 'linkedin']} className={"hover:opacity-80"}/></a>
+                                <FontAwesomeIcon icon={['fab', 'linkedin']}/></a>
                             <a href={"/Front-EndWebDevCertificateWarrenChemerika.pdf"}
                                title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}
                                target={"_blank"}><FontAwesomeIcon icon={['fas', 'square-check']}
-                                                                  className={"hover:opacity-80"}/></a>
+                                                                  /></a>
                             <Link to={'/privacy'} title={"Privacy Policy"}><FontAwesomeIcon icon={['fas', 'square-parking']}
-                                                                                            className={"hover:opacity-80"}/></Link>
+                                                                                            /></Link>
                             <a href={"https://fontawesome.com/"} title={"Provider of Icons: Font Awesome v6"}
                                target={"_blank"}><FontAwesomeIcon icon={['fab', 'square-font-awesome-stroke']}
-                                                                  className={"hover:opacity-80"}/></a>
+                                                                  /></a>
                         </div>
                     </footer>
                 </div>
