@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face { font-family: 'Spongeboy Me Bob'; /* from da font */ src: url('assets/Spongeboy Me Bob.ttf'); /* from da font */ }
+.spongeboymebob { font-family: 'Spongeboy Me Bob'; /* from da font */ }
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 22, 22,0.54);
+    border-radius: 50px;
+}
+
+/* background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.animated-gradient {
+    background: linear-gradient(205deg, #222, #111);
+    background-size: 400% 400%;
+    animation: gradientAnimation 100s ease infinite;
+}
+
+/* dropdowns */
+summary::-webkit-details-marker {
+    display: none;
+}
