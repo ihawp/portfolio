@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName } from "@fortawesome/free-brands-svg-icons";
 
 export interface projectData {
+    index: number;
     title: string;
     description: string[];
     url: string;
@@ -11,10 +12,12 @@ export interface projectData {
     logos: IconName[];
     open: boolean;
     classes: string;
+    toggleDetails: any;
 }
 
 const Portfolio: FC = () => {
     const [data, setData] = useState<projectData[]>([]);
+    const [currentOpen, setCurrentOpen] = useState(0);
 
     useEffect(() => {
         get();
@@ -34,13 +37,14 @@ const Portfolio: FC = () => {
                 return response.json();
             })
             .then((data) => {
-                const transformedData: projectData[] = data.map((item: any) => {
+                const transformedData: projectData[] = data.map((item: projectData, index: number) => {
                     return {
+                        index: index,
                         title: item.title,
-                        description: JSON.parse(item.description) as string[], // Parse and assert type
+                        description: JSON.parse(item.description) as string[],
                         url: item.url,
                         github: item.github,
-                        logos: JSON.parse(item.logos) as IconName[], // Parse and assert type
+                        logos: JSON.parse(item.logos) as IconName[],
                         open: item.open,
                         classes: item.classes,
                     };
@@ -53,16 +57,22 @@ const Portfolio: FC = () => {
             });
     }
 
+    function toggleDetails(index: number) {
+        setCurrentOpen(index);
+    }
+
     return <div id={"portfolio"}>
         {data.map((item: projectData, key: number) => {
             return <Project key={key}
+                     index={key}
                      title={item.title}
                      description={item.description}
                      url={item.url}
                      github={item.github}
                      logos={item.logos}
-                     open={item.open}
+                     open={item.index === currentOpen}
                      classes={item.classes}
+                     toggleDetails={toggleDetails}
             />
         })}
     </div>;

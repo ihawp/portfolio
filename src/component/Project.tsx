@@ -1,21 +1,20 @@
-import {useState, FC} from "react";
+import { useState, FC } from "react";
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { projectData } from '../page/Home';
 
-const Project: FC<projectData> = ({ title, description, url, github, logos, classes, open }) => {
-    const [isOpen, setIsOpen] = useState(open);
-
-    const toggleDetails = () => {
-        setIsOpen((prev) => !prev);
-    };
+const Project: FC<projectData> = ({ index, title, description, url, github, logos, classes, open, toggleDetails }) => {
+    const toggle = () => {
+        toggleDetails(index, open);
+    }
 
     return <div
         className={"border-[#999] border-opacity-10 border-t-2 border-solid py-4 last:border-b-2 last:border-b-black" + classes}>
         <summary className={`list-none cursor-pointer flex items-center`}>
-            <div className={"w-full flex sm:p-4 py-4 items-center"} onClick={toggleDetails}>
-                <FontAwesomeIcon icon={['fas', isOpen ? 'minus' : 'plus']} className={"mr-3 opacity-40 text-[#999] hidden sm:inline"}/>
-                <h2 className={'text-2xl font-medium h-full' + (isOpen ? ' text-green-500' : '')}>{title}</h2>
+            <div className={"w-full flex sm:p-4 py-4 items-center"} onClick={ toggle }>
+                <FontAwesomeIcon icon={['fas', open ? 'minus' : 'plus']}
+                                 className={"mr-3 opacity-40 text-[#999] hidden sm:inline"}/>
+                <h2 className={'text-2xl font-medium h-full' + (open ? ' text-green-500' : '')}>{title}</h2>
             </div>
             <div className={"w-min flex gap-3 items-center ml-2"}>
                 {github.length > 0 ?
@@ -24,12 +23,12 @@ const Project: FC<projectData> = ({ title, description, url, github, logos, clas
                         <FontAwesomeIcon icon={['fab', 'github']} className={"text-xl"}/>
                     </Link> : ''}
                 <Link to={url} title={title} target="_blank"
-                   className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
+                      className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
                     <FontAwesomeIcon icon={['fas', 'link']}/>
                 </Link>
             </div>
         </summary>
-        <div className={`overflow-hidden transition-all duration-75 sm:px-4 ${isOpen ? 'py-4' : 'max-h-0'}`}>
+        <div className={`overflow-hidden transition-all duration-75 sm:px-4 ${open ? 'py-4' : 'max-h-0'}`}>
             {description.map((item, index) => (<div key={index}>
                     <p className={"opacity-95 leading-7 pb-4"}>{item}</p>
                 </div>
