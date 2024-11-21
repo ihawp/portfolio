@@ -37,7 +37,7 @@ const Portfolio: FC = () => {
                 return response.json();
             })
             .then((data) => {
-                const transformedData: projectData[] = data.map((item: projectData, index: number) => {
+                const transformedData: projectData[] = data.map((item: any, index: number) => {
                     return {
                         index: index,
                         title: item.title,

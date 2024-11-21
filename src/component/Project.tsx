@@ -1,9 +1,12 @@
-import { useState, FC } from "react";
+import { FC } from "react";
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { projectData } from '../page/Home';
+import { IconName } from "@fortawesome/free-brands-svg-icons";
+
 
 const Project: FC<projectData> = ({ index, title, description, url, github, logos, classes, open, toggleDetails }) => {
+
     const toggle = () => {
         toggleDetails(index, open);
     }
@@ -29,12 +32,12 @@ const Project: FC<projectData> = ({ index, title, description, url, github, logo
             </div>
         </summary>
         <div className={`overflow-hidden transition-all duration-75 sm:px-4 ${open ? 'py-4' : 'max-h-0'}`}>
-            {description.map((item, index) => (<div key={index}>
+            {description.map((item: string, index: number) => (<div key={index}>
                     <p className={"opacity-95 leading-7 pb-4"}>{item}</p>
                 </div>
             ))}
             <div className={"flex gap-8 text-4xl text-[#999] text-opacity-50 pt-1 justify-center"}>
-                {logos.map((item, index) => (<div key={index}>
+                {logos.map((item: IconName, index: number) => (<div key={index}>
                         <FontAwesomeIcon icon={['fab', item]}/>
                     </div>
                 ))}
