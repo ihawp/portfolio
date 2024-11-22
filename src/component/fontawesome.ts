@@ -20,7 +20,7 @@ import {
     faGithubSquare,
     faGithub,
     faLinkedin,
-    faNode,
+    faNodeJs,
     faSquareFontAwesomeStroke
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -41,6 +41,6 @@ library.add(
     faWordpress,
     faGithubSquare,
     faLinkedin,
-    faNode,
+    faNodeJs,
     faSquareFontAwesomeStroke
 );

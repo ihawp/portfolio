@@ -25,10 +25,11 @@ const Project: FC<projectData> = ({ index, title, description, url, github, logo
                           className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
                         <FontAwesomeIcon icon={['fab', 'github']} className={"text-xl"}/>
                     </Link> : ''}
-                <Link to={url} title={title} target="_blank"
-                      className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
-                    <FontAwesomeIcon icon={['fas', 'link']}/>
-                </Link>
+                {url.length > 0 ?
+                    <Link to={url} title={title} target="_blank"
+                          className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
+                        <FontAwesomeIcon icon={['fas', 'link']}/>
+                    </Link> : ''}
             </div>
         </summary>
         <div className={`overflow-hidden transition-all duration-75 sm:px-4 ${open ? 'py-4' : 'max-h-0'}`}>
