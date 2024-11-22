@@ -5,14 +5,14 @@ import { projectData } from '../page/Home';
 import { IconName } from "@fortawesome/free-brands-svg-icons";
 
 
-const Project: FC<projectData> = ({ index, title, description, url, github, logos, classes, open, toggleDetails }) => {
+const Project: FC<projectData> = ({ index, title, description, url, github, logos, open, toggleDetails }) => {
 
     const toggle = () => {
         toggleDetails(index, open);
     }
 
     return <div
-        className={"border-[#999] border-opacity-10 border-t-2 border-solid py-4 last:border-b-2 last:border-b-black" + classes}>
+        className={"border-[#999] border-opacity-10 border-t-2 border-solid py-4 last:border-b-2"}>
         <summary className={`list-none cursor-pointer flex items-center`}>
             <div className={"w-full flex sm:p-4 py-4 items-center"} onClick={ toggle }>
                 <FontAwesomeIcon icon={['fas', open ? 'minus' : 'plus']}
