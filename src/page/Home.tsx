@@ -88,7 +88,7 @@ export default function Home() {
                 title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}>Saskatchewan
                 Polytechnic</a></p>
             <p className={"opacity-35 text-xs max-w-80 sm:max-w-none"}>Completing Front-End Web Developer Certificate @ BCIT (January 2025 - July 2025)<br/>
-               Applied for Full-Stack Web Developer Diploma @ BCIT (September 2025 - September 2027)</p>
+               Applying for Full-Stack Web Developer Diploma @ BCIT (September 2025 - September 2027)</p>
         </div>
         <Portfolio/>
     </>;
