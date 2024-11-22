@@ -90,6 +90,8 @@ export default function Home() {
                 href={"/Front-EndWebDevCertificateWarrenChemerika.pdf"} target={"_blank"} className={"underline"}
                 title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}>Saskatchewan
                 Polytechnic</a></p>
+            <p className={"opacity-35 text-xs"}>Completing Front-End Web Developer Certificate @ BCIT (January 2025 - July 2025)<br/>
+               Applied for Full-Stack Web Developer Diploma @ BCIT (September 2025 - September 2027)</p>
         </div>
         <Portfolio/>
     </>;

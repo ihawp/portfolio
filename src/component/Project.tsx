@@ -38,7 +38,7 @@ const Project: FC<projectData> = ({ index, title, description, url, github, logo
             ))}
             <div className={"flex gap-8 text-4xl text-[#999] text-opacity-50 pt-1 justify-center"}>
                 {logos.map((item: IconName, index: number) => (<div key={index}>
-                        <FontAwesomeIcon icon={['fab', item]}/>
+                        <FontAwesomeIcon icon={['fab', item]} />
                     </div>
                 ))}
             </div>
