@@ -8,7 +8,7 @@ import { IconName } from "@fortawesome/free-brands-svg-icons";
 const Project: FC<projectData> = ({ index, title, description, url, github, logos, open, toggleDetails }) => {
 
     const toggle = () => {
-        toggleDetails(index, open);
+        toggleDetails(index);
     }
 
     return <div

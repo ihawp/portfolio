@@ -78,7 +78,8 @@ const Portfolio: FC = () => {
 export default function Home() {
     return <>
         <div className={"flex items-center justify-center flex-col sm:py-20 py-16 gap-3 text-center"}>
-            <h1 className={"sm:text-6xl text-[35px] mb-1 sm:mb-0"}><span className={"font-bold"}>Warren Chemerika</span></h1>
+            <h1 className={"sm:text-6xl text-[35px] mb-1 sm:mb-0"}><span className={"font-bold"}>Warren Chemerika</span>
+            </h1>
             <h2 className={"sm:text-[39px] sm:leading-10 text-[23px] bg-[#999] bg-opacity-10 px-3 py-3 sm:pt-3 sm:pb-4 sm:w-max text-center rounded font-semibold"}>Web
                 Developer @ <a target={"_blank"} className="hover:underline" href={"https://www.servoweb.com/"}
                                title={"Servoweb Technologies"}>Servoweb</a></h2>
@@ -87,9 +88,11 @@ export default function Home() {
                 href={"/Front-EndWebDevCertificateWarrenChemerika.pdf"} target={"_blank"} className={"underline"}
                 title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}>Saskatchewan
                 Polytechnic</a></p>
-            <p className={"opacity-35 text-xs max-w-80 sm:max-w-none"}>Completing Front-End Web Developer Certificate @ BCIT (January 2025 - July 2025)<br/>
-               Applying for Full-Stack Web Developer Diploma @ BCIT (September 2025 - September 2027)</p>
+            <p className={"opacity-35 text-xs max-w-80 sm:max-w-none"}>Completing Front-End Web Developer Certificate @
+                BCIT (January 2025 - July 2025)</p>
+            <p className={"opacity-35 text-xs max-w-80 sm:max-w-3xl"}>Completing Foundations of Math 12 ASAP then will begin Pre-Calculus 12</p>
         </div>
         <Portfolio/>
-    </>;
+    </>
+;
 }
