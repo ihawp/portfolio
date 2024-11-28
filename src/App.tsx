@@ -1,19 +1,9 @@
-import { useEffect } from 'react';
-import { Route, Routes, Link, useLocation } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import Home from './page/Home';
 import Roadmap from './page/Roadmap';
 import PrivacyPolicy from "./page/PrivacyPolicy";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-const ScrollToTop = () => {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
-    return null;
-};
+import ScrollToTop from './component/ScrollToTop.tsx';
 
 export default function App() {
     return <>
@@ -47,7 +37,7 @@ export default function App() {
                         <div
                             className={"sm:w-[300px] w-full sm:text-xl text-lg flex justify-center mt-7 sm:mt-0 sm:justify-start"}>
                             <p className={"spongeboymebob"}><Link
-                                to={"/"}>&copy; ihawp.com {new Date().getFullYear()}</Link></p>
+                                to={"/"} onClick={ScrollToTop}>&copy; ihawp.com {new Date().getFullYear()}</Link></p>
                         </div>
                         <div
                             className={"flex flex-auto flex-wrap sm:justify-end w-full sm:gap-3 gap-4 sm:text-3xl text-5xl justify-center"}>

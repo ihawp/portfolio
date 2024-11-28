@@ -1,7 +1,9 @@
 import { useState, useEffect, FC } from 'react';
+import { Link } from 'react-router-dom';
 import Project from '../component/Project';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName } from "@fortawesome/free-brands-svg-icons";
+import ScrollToTop from "../component/ScrollToTop.tsx";
 
 export interface projectData {
     index: number;
@@ -88,9 +90,7 @@ export default function Home() {
                 href={"/Front-EndWebDevCertificateWarrenChemerika.pdf"} target={"_blank"} className={"underline"}
                 title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}>Saskatchewan
                 Polytechnic</a></p>
-            <p className={"opacity-35 text-xs max-w-80 sm:max-w-none"}>Completing Front-End Web Developer Certificate @
-                BCIT (January 2025 - July 2025)</p>
-            <p className={"opacity-35 text-xs max-w-80 sm:max-w-3xl"}>Completing Foundations of Math 12 ASAP then will begin Pre-Calculus 12</p>
+            <Link to={"/roadmap"} onClick={ScrollToTop} className={"opacity-35 text-sm max-w-80 sm:max-w-none"}>View Roadmap (2024-2027)</Link>
         </div>
         <Portfolio/>
     </>
