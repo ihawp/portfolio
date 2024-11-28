@@ -1,5 +1,5 @@
 import { FC } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { projectData } from '../page/Home';
 import { IconName } from "@fortawesome/free-brands-svg-icons";

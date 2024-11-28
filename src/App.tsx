@@ -1,6 +1,7 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import { Route, Routes, Link, useLocation } from 'react-router-dom';
 import Home from './page/Home';
+import Roadmap from './page/Roadmap';
 import PrivacyPolicy from "./page/PrivacyPolicy";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -39,6 +40,7 @@ export default function App() {
                     <ScrollToTop />
                     <Routes>
                         <Route path="/" element={<Home/>}/>
+                        <Route path="/roadmap" element={<Roadmap/>}/>
                         <Route path="/privacy" element={<PrivacyPolicy/>}/>
                     </Routes>
                     <footer className={"flex text-lg pt-16 pb-32 sm:py-10 flex-col-reverse sm:flex-row sm:justify-start text-[#999] text-opacity-40"}>
@@ -62,7 +64,7 @@ export default function App() {
                                title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}
                                target={"_blank"}><FontAwesomeIcon icon={['fas', 'square-check']}
                                                                   /></a>
-                            <Link to={'/privacy'} title={"Privacy Policy"}><FontAwesomeIcon icon={['fas', 'square-parking']}
+                            <Link to={'/privacy'} title={"Privacy Policy"} onClick={ScrollToTop}><FontAwesomeIcon icon={['fas', 'square-parking']}
                                                                                             /></Link>
                             <a href={"https://fontawesome.com/"} title={"Provider of Icons: Font Awesome v6"}
                                target={"_blank"}><FontAwesomeIcon icon={['fab', 'square-font-awesome-stroke']}
