@@ -7,7 +7,8 @@ import {
     faEnvelopeSquare,
     faSquareCheck,
     faSquareParking,
-    faCircleCheck
+    faCircleCheck,
+    faCircleExclamation
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -42,5 +43,6 @@ library.add(
     faGithubSquare,
     faLinkedin,
     faNodeJs,
-    faSquareFontAwesomeStroke
+    faSquareFontAwesomeStroke,
+    faCircleExclamation
 );

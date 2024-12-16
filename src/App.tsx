@@ -2,6 +2,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Home from './page/Home';
 import Roadmap from './page/Roadmap';
 import PrivacyPolicy from "./page/PrivacyPolicy";
+import Error404 from "./page/Error404.tsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ScrollToTop from './component/ScrollToTop.tsx';
 
@@ -10,13 +11,12 @@ export default function App() {
         <div className="animated-gradient h-screen flex items-center justify-center">
             <div className={"h-svh w-screen overflow-y-auto overflow-x-hidden flex items-start justify-center"}>
                 <div className={"text-white text-lg w-full p-4 max-w-3xl flex flex-col"}>
-                    <header className={"font-bold flex bg-[#999] bg-opacity-10 rounded py-1 px-1.5 sm:pr-2 sm:pl-4"}>
+                    <header className={"font-bold flex bg-[#999] mb-4 bg-opacity-10 rounded py-1 px-1.5 sm:pr-2 sm:pl-4"}>
                         <div className={"items-center sm:flex hidden"}>
                             <h2 className={"text-xl spongeboymebob mt-1 text-green-600"}><Link to={"/"}>ihawp.com</Link>
                             </h2>
                         </div>
-                        <nav
-                            className={"flex sm:gap-5 h-[40px] w-full justify-end items-center gap-3 sm:gap-0 text-center"}>
+                        <nav className={"flex sm:gap-5 h-[40px] w-full justify-end items-center gap-3 sm:gap-0 text-center"}>
                             <Link to={"https://www.linkedin.com/in/warren-chemerika-628b15275"} title="LinkedIn: Warren Chemerika"
                                   target={"_blank"}
                                   className={"sm:flex-grow-0 flex-grow"}>LinkedIn</Link>
@@ -32,8 +32,9 @@ export default function App() {
                         <Route path="/" element={<Home/>}/>
                         <Route path="/roadmap" element={<Roadmap/>}/>
                         <Route path="/privacy" element={<PrivacyPolicy/>}/>
+                        <Route path="/*" element={<Error404/>}/>
                     </Routes>
-                    <footer className={"flex text-lg pt-16 pb-32 sm:py-10 flex-col-reverse sm:flex-row sm:justify-start text-[#999] text-opacity-40"}>
+                    <footer className={"flex text-lg sm:py-4 py-16 flex-col-reverse sm:flex-row sm:justify-start items-center text-[#999] text-opacity-40"}>
                         <div
                             className={"sm:w-[300px] w-full sm:text-xl text-lg flex justify-center mt-7 sm:mt-0 sm:justify-start"}>
                             <p className={"spongeboymebob"}><Link
