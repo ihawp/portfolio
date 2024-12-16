@@ -1,7 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function Error404() {
-    return <div className={"w-full h-[300px] flex bg-white justify-center items-center"}>
+    return <div className={"w-full h-[300px] flex justify-center items-center"}>
         <ul className={"list-none rounded bg-red-500 p-5 flex flex-col items-center justify-center"}>
 
             <FontAwesomeIcon icon={"circle-exclamation"} className={"text-7xl"}/>

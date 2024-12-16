@@ -1,10 +1,9 @@
+import { useState } from 'react';
+
+
 export default function Roadmap() {
-    return <div className="max-w-3xl py-10 sm:px-5">
-
-        <h1 className="text-4xl font-bold mb-10 text-center">Roadmap</h1>
-
-
-        <div className={"bg-black w-full p-10 text-[#222] rounded mb-3"}>
+    return <div className="max-w-3xl">
+        <div className={"bg-black w-full p-10 rounded mb-3"}>
             <h2 className="text-2xl font-semibold mt-6 mb-3">2024</h2>
             <ul className={"list-disc px-10"}>
                 <li className="mb-4 opacity-90">Complete Applied Certificate of Front-End Web Development @ Saskatchewan
@@ -46,4 +45,11 @@ export default function Roadmap() {
             <li className="mb-4 opacity-90">Complete Degree @ BCIT</li>
         </ul>
     </div>
+}
+
+function Itemm(wow:string, bananaphone: string) {
+    return <>
+        <h1>${wow}</h1>
+        <h1>${bananaphone}</h1>
+    </>
 }

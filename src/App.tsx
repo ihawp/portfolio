@@ -34,7 +34,7 @@ export default function App() {
                         <Route path="/privacy" element={<PrivacyPolicy/>}/>
                         <Route path="/*" element={<Error404/>}/>
                     </Routes>
-                    <footer className={"flex text-lg sm:py-4 py-16 flex-col-reverse sm:flex-row sm:justify-start items-center text-[#999] text-opacity-40"}>
+                    <footer className={"flex text-lg sm:pt-4 sm:pb-0 py-16 flex-col-reverse sm:flex-row sm:justify-start items-center text-[#999] text-opacity-40"}>
                         <div
                             className={"sm:w-[300px] w-full sm:text-xl text-lg flex justify-center mt-7 sm:mt-0 sm:justify-start"}>
                             <p className={"spongeboymebob"}><Link

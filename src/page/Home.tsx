@@ -21,7 +21,10 @@ const Portfolio: FC = () => {
     const [currentOpen, setCurrentOpen] = useState(0);
 
     useEffect(() => {
-        get();
+        if (data.length === 0) {
+            console.log('wowowowowow');
+            get();
+        }
     }, [])
 
     const get = () => {
@@ -80,16 +83,14 @@ const Portfolio: FC = () => {
 export default function Home() {
     return <>
         <div className={"flex items-center justify-center flex-col py-8 sm:pt-8 sm:pb-12 gap-3 text-center"}>
-
-            <img alt="Warren Chemerika" className="rounded-full w-[250px] mb-2 shadow-md shadow-[#222]" draggable={"false"} src={"./public/w.jpg"}/>
+            <img alt="Warren Chemerika" className="rounded-full w-[200px] hover:bg-green-500 hover:p-5 transition-all mb-2 shadow-md shadow-[#222]" draggable={"false"} src={"./w.jpg"}/>
             <h1 className={"sm:text-6xl text-[35px] mb-1 sm:mb-0"}><span className={"font-bold"}>Warren Chemerika</span>
             </h1>
             <h2 className={"sm:text-[39px] sm:leading-10 text-[23px] bg-[#999] bg-opacity-10 px-3 py-3 sm:pt-3 sm:pb-4 sm:w-max text-center rounded font-semibold"}>
-                Web Developer @
-                <a target={"_blank"} className="hover:underline" href={"https://www.servoweb.com/"} title={"Servoweb Technologies"}>
+                Web Developer @ <a target={"_blank"} className="hover:underline" href={"https://www.servoweb.com/"} title={"Servoweb Technologies"}>
                     Servoweb
                 </a></h2>
-            <p className={"sm:mt-3"}><FontAwesomeIcon icon={['fas', 'circle-check']} className={"text-green-600 sm:mr-0.5"}/> Certified
+            <p className={"sm:mt-1"}><FontAwesomeIcon icon={['fas', 'circle-check']} className={"text-green-600 sm:mr-0.5"}/> Certified
                 by <a
                 href={"/Front-EndWebDevCertificateWarrenChemerika.pdf"} target={"_blank"} className={"underline"}
                 title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}>
