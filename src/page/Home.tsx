@@ -21,9 +21,7 @@ const Portfolio: FC = () => {
     const [currentOpen, setCurrentOpen] = useState(0);
 
     useEffect(() => {
-        console.log(data);
         if (data.length === 0) {
-            console.log('wowowowowow');
             get();
         }
     }, [data])
