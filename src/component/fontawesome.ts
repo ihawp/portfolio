@@ -12,6 +12,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
+    faCircle
+} from '@fortawesome/free-regular-svg-icons';
+
+import {
     faReact,
     faHtml5,
     faCss,
@@ -44,5 +48,6 @@ library.add(
     faLinkedin,
     faNodeJs,
     faSquareFontAwesomeStroke,
-    faCircleExclamation
+    faCircleExclamation,
+    faCircle
 );
