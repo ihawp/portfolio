@@ -1,9 +1,10 @@
 import { FC } from "react";
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { projectData } from '../page/Home';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName } from "@fortawesome/free-brands-svg-icons";
-
+import { faLink, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Project: FC<projectData> = ({ index, title, description, url, github, logos, open, toggleDetails }) => {
 
@@ -15,7 +16,7 @@ const Project: FC<projectData> = ({ index, title, description, url, github, logo
         className={"border-[#999] border-opacity-10 border-t-2 border-solid py-4 last:border-b-2"}>
         <summary className={`list-none cursor-pointer flex items-center`}>
             <div className={"w-full flex sm:p-4 py-4 items-center"} onClick={ toggle }>
-                <FontAwesomeIcon icon={['fas', open ? 'minus' : 'plus']}
+                <FontAwesomeIcon icon={open ? faMinus : faPlus}
                                  className={"mr-3 opacity-40 text-[#999] hidden sm:inline"}/>
                 <h2 className={'text-2xl font-medium h-full' + (open ? ' text-green-500' : '')}>{title}</h2>
             </div>
@@ -23,12 +24,12 @@ const Project: FC<projectData> = ({ index, title, description, url, github, logo
                 {github.length > 0 ?
                     <Link to={github} title={github} target="_blank"
                           className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
-                        <FontAwesomeIcon icon={['fab', 'github']} className={"text-xl"}/>
+                        <FontAwesomeIcon icon={faGithub} className={"text-xl"}/>
                     </Link> : ''}
                 {url.length > 0 ?
                     <Link to={url} title={title} target="_blank"
                           className={"bg-[#999] hover:bg-opacity-30 bg-opacity-20 rounded-full w-9 h-9 transition flex items-center justify-center"}>
-                        <FontAwesomeIcon icon={['fas', 'link']}/>
+                        <FontAwesomeIcon icon={faLink}/>
                     </Link> : ''}
             </div>
         </summary>

@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName } from "@fortawesome/free-brands-svg-icons";
 import ScrollToTop from "../component/ScrollToTop.tsx";
 
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+
 export interface projectData {
     index: number;
     title: string;
@@ -89,7 +91,7 @@ export default function Home() {
                 Web Developer @ <a target={"_blank"} className="hover:underline" href={"https://www.servoweb.com/"} title={"Servoweb Technologies"}>
                     Servoweb
                 </a></h2>
-            <p className={"sm:mt-1"}><FontAwesomeIcon icon={['fas', 'circle-check']} className={"text-green-600 sm:mr-0.5"}/> Certified
+            <p className={"sm:mt-1"}><FontAwesomeIcon icon={faCircleCheck} className={"text-green-600 sm:mr-0.5"}/> Certified
                 by <a
                 href={"/Front-EndWebDevCertificateWarrenChemerika.pdf"} target={"_blank"} className={"underline"}
                 title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}>
