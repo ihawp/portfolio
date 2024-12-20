@@ -27,15 +27,15 @@ export default function Roadmap() {
                                          className={"h-[30px] w-[20px] sm:mr-5 mr-3 text-green-600"}/>
                         <p>Get hired as Web Developer @ Servoweb Technologies</p>
                     </li>
-                    <li className={"flex items-start"}>
-                        <FontAwesomeIcon icon={faCircle} className={"h-[30px] w-[20px] sm:mr-5 mr-3 opacity-20"}/>
-                        <p>Complete Foundations of Math 12 @ EBUS</p>
-                    </li>
                 </ul>
             </li>
             <li id="2025">
                 <h2 className="text-3xl font-bold pl-5 mt-6 mb-10 border-solid border-[#999] border-opacity-20 sm:border-l-[2.5rem] border-l-[1.3rem] h-[2px] flex items-center">2025</h2>
                 <ul className={"list-none sm:pl-[3.8rem] pl-[2.5rem] flex flex-col gap-5"}>
+                    <li className={"flex items-start"}>
+                        <FontAwesomeIcon icon={faCircle} className={"h-[30px] w-[20px] sm:mr-5 mr-3 opacity-20"}/>
+                        <p>Complete Foundations of Math 12 @ EBUS</p>
+                    </li>
                     <li className={"flex items-start"}>
                         <FontAwesomeIcon icon={faCircle} className={"h-[30px] w-[20px] sm:mr-5 mr-3 opacity-20"}/>
                         <p>Complete Front-End Web Developer Certificate @ BCIT</p>
