@@ -2,11 +2,26 @@ import { FC } from "react";
 import { Link } from 'react-router-dom';
 import { projectData } from '../page/Home';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconName } from "@fortawesome/free-brands-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faLink, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faJsSquare, faHtml5, faReact, faNodeJs, faPhp, faCss, faWordpress } from "@fortawesome/free-brands-svg-icons";
 
-const Project: FC<projectData> = ({ index, title, description, url, github, logos, open, toggleDetails }) => {
+const IconMap: { [key: string]: IconDefinition } = {
+    faHtml5: faHtml5,
+    faCss: faCss,
+    faJsSquare: faJsSquare,
+    faPhp: faPhp,
+    faReact: faReact,
+    faNodeJs: faNodeJs,
+    faWordpress: faWordpress,
+};
+
+const Project: FC<projectData> = ({ index, title, description, url, github, languages, open, toggleDetails }) => {
+
+    const desc = JSON.parse(description);
+    const logo = JSON.parse(languages);
+
 
     const toggle = () => {
         toggleDetails(index);
@@ -34,13 +49,13 @@ const Project: FC<projectData> = ({ index, title, description, url, github, logo
             </div>
         </summary>
         <div className={`overflow-hidden transition-all duration-75 sm:px-4 ${open ? 'py-4' : 'max-h-0'}`}>
-            {description.map((item: string, index: number) => (<div key={index}>
+            {desc.map((item: string, index: number) => (<div key={index}>
                     <p className={"opacity-95 leading-7 pb-4"}>{item}</p>
                 </div>
             ))}
             <div className={"flex gap-8 text-4xl text-[#999] text-opacity-50 pt-1 justify-center"}>
-                {logos.map((item: IconName, index: number) => (<div key={index}>
-                        <FontAwesomeIcon icon={['fab', item]} />
+                {logo.map((item: string, index: number) => (<div key={index}>
+                        <FontAwesomeIcon icon={IconMap[item]} />
                     </div>
                 ))}
             </div>

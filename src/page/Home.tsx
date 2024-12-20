@@ -2,7 +2,6 @@ import { useState, useEffect, FC } from 'react';
 import { Link } from 'react-router-dom';
 import Project from '../component/Project';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconName } from "@fortawesome/free-brands-svg-icons";
 import ScrollToTop from "../component/ScrollToTop.tsx";
 
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
@@ -10,10 +9,10 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 export interface projectData {
     index: number;
     title: string;
-    description: string[];
+    description: string;
     url: string;
     github: string;
-    logos: IconName[];
+    languages: string;
     open: boolean;
     toggleDetails: any;
 }
@@ -23,10 +22,8 @@ const Portfolio: FC = () => {
     const [currentOpen, setCurrentOpen] = useState(0);
 
     useEffect(() => {
-        if (data.length === 0) {
             get();
-        }
-    }, [data])
+    }, [])
 
     const get = () => {
         fetch('https://backend.ihawp.com/projects', {
@@ -42,14 +39,14 @@ const Portfolio: FC = () => {
                 return response.json();
             })
             .then((data) => {
-                const transformedData: projectData[] = data.map((item: any, index: number) => {
+                const transformedData: projectData[] = data.map((item: projectData, index: number) => {
                     return {
                         index: index,
                         title: item.title,
-                        description: JSON.parse(item.description) as string[],
+                        description: item.description,
                         url: item.url,
                         github: item.github,
-                        logos: JSON.parse(item.logos) as IconName[],
+                        languages: item.languages,
                         open: item.open,
                     };
                 });
@@ -66,14 +63,14 @@ const Portfolio: FC = () => {
     }
 
     return <div id={"portfolio"}>
-        {data.map((item: projectData, key: number) => {
-            return <Project key={key}
-                     index={key}
+        {data.map((item: projectData, index: number) => {
+            return <Project key={index}
+                     index={index}
                      title={item.title}
                      description={item.description}
                      url={item.url}
                      github={item.github}
-                     logos={item.logos}
+                     languages={item.languages}
                      open={item.index === currentOpen}
                      toggleDetails={toggleDetails}
             />
