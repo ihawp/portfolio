@@ -2,6 +2,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
+
+/*
+    changed second block to ul (was div) for Google
+ */
 export default function Roadmap() {
     return <>
         <div className={"sm:flex h-max pb-5 hidden gap-3 w-full text-center text-[#999] text-opacity-70 text-xs"}>
@@ -12,7 +16,7 @@ export default function Roadmap() {
             <a href={"#2028"} className={"p-1 flex-grow bg-[#999] bg-opacity-10 rounded hover:bg-opacity-30"}>2028</a>
             <a href={"#2029"} className={"p-1 flex-grow bg-[#999] bg-opacity-10 rounded hover:bg-opacity-30"}>2029</a>
         </div>
-        <div
+        <ul
             className={"list-none border-[#999] border-opacity-20 border-l-[2px] border-solid w-full py-10 flex flex-col gap-14"}>
             <li id="2024">
                 <h2 className="text-3xl font-bold pl-5 mt-6 mb-10 border-solid border-[#999] border-opacity-20 sm:border-l-[2.5rem] border-l-[1.3rem] h-[2px] flex items-center">2024</h2>
@@ -94,6 +98,6 @@ export default function Roadmap() {
                     </li>
                 </ul>
             </li>
-        </div>
+        </ul>
     </>
 }
