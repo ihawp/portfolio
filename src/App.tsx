@@ -6,12 +6,6 @@ import Error404 from "./page/Error404.tsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ScrollToTop from './component/ScrollToTop.tsx';
 
-
-/*
-    HEADER Contact button has been updated to bg-green-700 for Google accessibility
-    Might have to become darker if this contrast is not enough
-    Will require some rethinking of other greens on the page!
- */
 export default function App() {
     return <>
         <div className="animated-gradient h-screen flex items-center justify-center">
