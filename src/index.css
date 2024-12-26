@@ -43,3 +43,12 @@
 summary::-webkit-details-marker {
     display: none;
 }
+
+/* REFACTOR CSS TO HAVE GLOBALS HERE */
+/* Make global vars for easy updating of pallette to hero-image
+    as that is the new strat?
+    one colourset forever is great, but I can switch things up
+    and that is okay! or is it not, does that ruin the whole
+    brand image thing?
+*/
+
