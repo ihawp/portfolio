@@ -26,7 +26,7 @@ const Portfolio: FC = () => {
     }, [])
 
     const get = () => {
-        fetch('https://backend.ihawp.com/projects', {
+        fetch('https://ihawp.com/projects', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
