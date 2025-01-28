@@ -93,7 +93,7 @@ export default function Home() {
                 href={"/Front-EndWebDevCertificateWarrenChemerika.pdf"} target={"_blank"} className={"underline"}
                 title={"Certificate of Front-End Web Development from Saskatchewan Polytechnic"}>
                     Saskatchewan Polytechnic</a></p>
-            <Link to={"/roadmap"} onClick={ScrollToTop} className={"opacity-35 text-sm max-w-80 sm:max-w-none"}>View Roadmap (2024-2029)</Link>
+            <Link to={"/roadmap"} onClick={ScrollToTop} className={"opacity-35 text-md max-w-80 sm:max-w-none"}>View Roadmap</Link>
         </div>
         <Portfolio/>
     </>
